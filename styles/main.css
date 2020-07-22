@@ -1,0 +1,171 @@
+/* main.css */
+@font-face {
+  font-family: 'Wasa';
+  src: url('/styles/fonts/Wasa_SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Wasa';
+  src: url('/styles/fonts/Wasa_Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Wasa';
+  src: url('/styles/fonts/Wasa_Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 0 !important
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #B3B3BB;
+  /*909092*/
+}
+
+main {
+  position: relative;
+  margin-left: 80px;
+  margin-right: 80px;
+  height: auto;
+}
+
+h1 {
+  margin: auto;
+  font-family: Wasa;
+  font-size: 480px;
+  line-height: 400px;
+  font-weight: 400;
+  color: #28282A;
+}
+
+h2 {
+  margin: auto;
+  margin-bottom: 80px;
+  font-family: Wasa;
+  font-size: 360px;
+  line-height: 360px;
+  font-weight: 400;
+  color: #28282A;
+}
+
+p {
+  font-family: Wasa;
+  font-size: 80px;
+  line-height:80px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #28282a;
+}
+
+#navigation {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#menu {
+  position: relative;
+  display: inline-flex;
+  right: 40px;
+}
+
+#logo {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 40px;
+  left: 40px;
+}
+
+.role {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+/* PROJECTS */
+#projects {
+  display: flex;
+  flex-direction: column;
+}
+
+#case {
+  position: relative;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+video {
+  width: 80%;
+  height: auto;
+  outline: none !important;
+}
+
+#aboutCase{
+  margin-bottom: 40px;
+}
+
+.link {
+  font-family: Wasa;
+  font-size: 20px;
+  font-weight: 600;
+  color: #28282A;
+  text-transform: uppercase;
+  margin-left: 40px;
+  letter-spacing: 0.4px;
+}
+
+.siteLink {
+ width: 56px;
+ height: 56px;
+}
+
+
+.linkSub {
+  font-size: 80px;
+  font-weight: 400;
+  margin-top: -40px;
+}
+
+a {
+  text-decoration: none;
+  color: #28282A;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+section{
+  margin-bottom: 120px;
+}
+
+.border {
+  border-bottom: 4px solid #28282A;
+}
+
+.copyright {
+  font-family: Wasa;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #28282A;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  text-align: center;
+  margin-bottom: 40px;
+}
