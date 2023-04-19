@@ -14,7 +14,6 @@
             margin: auto;
             width: 100%;
             height: 100vh;
-
         }
 
         .card {
@@ -30,17 +29,27 @@
             justify-content: center;
             align-items: center;
             transform: rotate(calc(-16deg + 46deg * var(--rotation)));
-            animation: rotate-card 1s ease-in-out forwards;
+            animation: rotate-card 1.5s ease-in-out forwards;
         }
 
         @keyframes rotate-card {
-            from {
-                transition: 0.4s;
+            0% {
+                background-color: #0057FF;
                 transform: rotate(0deg);
-                filter: blur(20px)
+                filter: blur(50px)
             }
 
-            to {
+
+
+            50% {
+                background-color: #F500FF;
+                transform: rotate(0deg);
+                filter: blur(200px)
+            }
+
+
+            100% {
+                background-color: #FFFFFF;
                 transform: rotate(360deg);
                 filter: blur(0px)
             }
