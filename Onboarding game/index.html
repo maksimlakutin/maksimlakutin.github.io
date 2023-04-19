@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Onboarding Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Craftwork+Grotesk&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Apercu+Pro&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0057FF;
+            width: 100%;
+            height: 100vh;
+
+        }
+
+        .card {
+            overflow: hidden;
+            background-color: #FFFFFF;
+            width: 800px;
+            height: 640px;
+            border-radius: 40px;
+            left: 50%;
+            top: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(calc(-16deg + 46deg * var(--rotation)));
+            animation: rotate-card 1s ease-in-out forwards;
+        }
+
+        @keyframes rotate-card {
+            from {
+                transform: rotate(0deg);
+                filter: blur(20px)
+            }
+
+            to {
+                transform: rotate(360deg);
+                filter: blur(0px)
+            }
+        }
+
+        .avatar {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: #0057FF;
+        }
+
+        .title {
+            margin-top: 60px;
+            color: #0057FF;
+            width: 480px;
+            font-family: "Craftwork Grotesk", sans-serif;
+            font-weight: 800;
+            text-align: center;
+            font-size: 48px;
+            line-height: 48px;
+            letter-spacing: 0;
+
+        }
+
+        .button {
+            margin-top: 60px;
+            background-color: #0057FF;
+            width: 240px;
+            height: 80px;
+            border-radius: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background-color: #256FFF;
+
+        }
+
+        .button-text {
+            transform: rotate(0deg);
+            color: #FFFFFF;
+            font-family: "Apercu Pro", sans-serif;
+            font-size: 36px;
+            font-weight: 400;
+            letter-spacing: -4;
+            line-height: 40px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div class="card">
+        <div class="avatar">
+        </div>
+        <div class="title" id="title-text"></div>
+        <div class="button" onclick="location.reload();">
+            <div class="button-text">дальше</div>
+        </div>
+    </div>
+    <script>
+        const card = document.querySelector('.card');
+        card.style.setProperty('--rotation', Math.random());
+
+    </script>
+    <script>
+        // Массив с несколькими текстами
+        var texts = ["самый странный опыт в твоей жизни", "исследуй неизвестное", "присоединись к приключению", "открой для себя новый мир"];
+
+        // Выбираем случайный текст из массива
+        var randomText = texts[Math.floor(Math.random() * texts.length)];
+
+        // Вставляем выбранный текст в элемент с id="title-text"
+        document.getElementById("title-text").innerHTML = randomText;
+
+    </script>
+
+
+    <script>
+        const avatars = [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg",
+            "image4.jpg",
+            "image5.jpg",
+            "image6.jpg",
+            "image7.jpg",
+            "image8.jpg",
+            "image9.jpg",
+            "image10.jpg"
+        ];
+        const avatarElement = document.querySelector('.avatar');
+        const randomIndex = Math.floor(Math.random() * avatars.length);
+        const randomAvatar = avatars[randomIndex];
+        avatarElement.style.backgroundImage = `url(${randomAvatar})`;
+
+    </script>
+
+
+</body>
+
+</html>
+
+</html>
