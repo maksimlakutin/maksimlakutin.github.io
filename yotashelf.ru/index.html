@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Главная страница</title>
+    <meta content="website" property="og:type">
+    <meta content="http://yotashelf.deluxetest.ru/" property="og:url">
+    <meta content="" property="fb:app_id">
+    <meta content="" property="og:title">
+    <meta content="digital production studio" property="og:description">
+    <meta content="http://yotashelf.deluxetest.ru//http://yotashelf.deluxetest.ru/images/share.jpg" property="og:image">
+    <meta content="1200" property="og:image:width">
+    <meta content="628" property="og:image:height">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta charset="utf-8">
+    <meta name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="fonts/fonts.css?v=0.0.5">
+    <link rel="stylesheet" href="styles/main.css?v=0.0.5">
+</head>
+
+<body>
+    <div class="page custom-page">
+        <div class="intro">
+            <div class="blobs">
+                <canvas class="blobs__canvas"></canvas>
+                <div class="blobs__hitarea"></div>
+                <input class="blobs__input blobs__input_image" type="file">
+            </div>
+            <div class="intro__header intro__element"><a class="intro__logo" href="/"></a>
+                <div class="intro__buttons">
+                    <button class="button button_manifest" data-modal="#about-modal">
+              <div class="button__text">о проекте</div>
+            </button>
+                    <button class="button button_feedback" data-nav="intro-4">
+              <div class="button__text">оставить заявку</div>
+            </button>
+                </div>
+            </div>
+            <div class="intro__content intro__element">
+                <div class="intro__item intro__item_1" id="intro-1">
+                    <h1 class="intro__item-title text-reveal intro__item-title_big"><span>Ищем новаторов</span> <span>и изобретателей –</span> <span>продавай свои</span> <span>гаджеты и товары</span> <span>в наших точках</span></h1>
+                    <button class="button button_manifest button_min intro__item-button" data-modal="#about-modal">
+              <div class="button__text">о проекте</div>
+            </button>
+                </div>
+                <div class="intro__item intro__item_2" id="intro-2">
+                    <h2 class="intro__item-title text-reveal"><span>Возможности <span class='intro__span-yota'>yota</span> в&nbsp;твоем</span><span>распоряжении, а&nbsp;именно:</span></h2>
+                    <h2 class="intro__item-title intro__item-title_2 text-reveal"><span>Возможности YOTA</span> <span>в&nbsp;твоем распоряжении,</span> <span>а&nbsp;именно:</span></h2>
+                    <ul class="intro__item-list">
+                        <li class="intro__option" style="animation-delay: .3s;"><span class='intro__option-span' data-modal='#map-modal'>2000 точек</span> продаж <br>по&nbsp;всей России</li>
+                        <li class="intro__option" style="animation-delay: .35s;">Современная красивая <span class='intro__option-span' data-modal='#gallery-modal' data-modal-params='index'>витрина</span>, отвечаю</li>
+                        <li class="intro__option" style="animation-delay: .4s;">Представлены <br>в&nbsp;<span class='intro__option-span' data-modal='#cities-modal'>1500 городах</span></li>
+                        <li class="intro__option" style="animation-delay: .45s;"><span class='intro__option-span' data-modal='#ca-modal'>Средний поток</span> через <br>точки 500 человек в&nbsp;сутки</li>
+                        <li class="intro__option" style="animation-delay: .5s;">Молодая и&nbsp;прогрессивная <span class='intro__option-span' data-modal='#ca-modal'>целевая аудитория</span></li>
+                        <li class="intro__option" style="animation-delay: .55s;">Возможность продавать в магазине <span class='intro__option-span' data-modal='#gallery-modal' data-modal-params='store'>YotaStore</span></li>
+                    </ul>
+                </div>
+                <div class="intro__item intro__item_3" id="intro-3">
+                    <h2 class="intro__item-title text-reveal"><span>Пиши, если: </span></h2>
+                    <ul class="intro__item-list">
+                        <li class="intro__option" style="animation-delay: .3s;">Ты — талантливый <br>изобретатель, но так себе <br>продавец</li>
+                        <li class="intro__option" style="animation-delay: .35s;">Находишь и продаёшь <br>необычные товары</li>
+                        <li class="intro__option" style="animation-delay: .4s;">Делаешь инновационные <br>проекты, но негде <br>их продавать</li>
+                        <li class="intro__option" style="animation-delay: .45s;">Хочешь выйти <br>на большой рынок</li>
+                    </ul>
+                </div>
+                <div class="intro__item intro__item_4" data-intro-page="feedback" id="intro-4">
+                    <div class="custom-scroll feedback-modal feedback-modal_intro">
+                        <div class="custom-scroll__content">
+                            <div class="feedback-modal__content">
+                                <div class="feedback-modal__title text-reveal"><span>Форма заявки</span></div>
+                                <form class="form feedback-modal__form" action="/request" method="POST">
+                                    <div class="input input_small feedback-modal__item input_title-as-placeholder" style="animation-delay: .3s;">
+                                        <label class="input__label">
+                        <div class="form-label input__title">Имя *
+                        </div>
+                        <input class="input__input" name="name" autocomplete="off" data-validations="required"></input>
+                      </label>
+                                        <div class="form-error">Неверно указан адрес сайта
+                                        </div>
+                                    </div>
+                                    <div class="input input_small feedback-modal__item input_title-as-placeholder" style="animation-delay: .35s;">
+                                        <label class="input__label">
+                        <div class="form-label input__title">Email или телефон *
+                        </div>
+                        <input class="input__input" name="email" autocomplete="off" data-validations="required,email-or-phone" data-inputmask></input>
+                      </label>
+                                        <div class="form-error">Неверно указан адрес сайта
+                                        </div>
+                                    </div>
+                                    <div class="input input_small feedback-modal__item input_title-as-placeholder" style="animation-delay: .4s;">
+                                        <label class="input__label">
+                        <div class="form-label input__title">Название продукта *
+                        </div>
+                        <input class="input__input" name="product_name" autocomplete="off" maxlength="50" data-validations="required"></input>
+                      </label>
+                                        <div class="form-error">Неверно указан адрес сайта
+                                        </div>
+                                        <div class="input__count">
+                                            <div class="input__count-from">0</div>
+                                            <div class="input__count-sep">&nbsp;/&nbsp;</div>
+                                            <div class="input__count-total">50</div>
+                                        </div>
+                                    </div>
+                                    <div class="input input_small input_textarea feedback-modal__item feedback-modal__textarea input_title-as-placeholder" style="animation-delay: .45s;">
+                                        <label class="input__label">
+                        <div class="form-label input__title">Краткое описание продукта *
+                        </div>
+                        <div class="input__resize-container">
+                          <div class="custom-scroll custom-scroll_textarea">
+                            <div class="custom-scroll__content">
+                              <textarea class="input__input" name="description" autocomplete="off" rows="3" maxlength="500" data-validations="required"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                                        <div class="form-error">Неверно указан адрес сайта
+                                        </div>
+                                    </div>
+                                    <div class="input input_small input_product-name feedback-modal__item input_title-as-placeholder" style="animation-delay: .5s;">
+                                        <label class="input__label">
+                        <div class="form-label input__title">Ссылка (если есть)
+                        </div>
+                        <input class="input__input" name="link" autocomplete="off"></input>
+                      </label>
+                                        <div class="form-error">Неверно указан адрес сайта
+                                        </div>
+                                    </div>
+                                    <div class="feedback-modal__conf feedback-modal__item">
+                                        <div class="files" style="animation-delay: .55s;">
+                                            <script class="template-engine files__file-tpl" type="text/template">
+                                                <div class="files__file {{#if error}}files__file_error{{/if}} files__file_loading" title="{{name}}" data-id="{{id}}">
+                                                    <div class="files__file-cross"></div>
+                                                    <div class="files__file-load">
+                                                        <svg class="files__file-load-border-block" viewBox="-25 -25 50 50">
+                                <circle class="files__file-load-border-path" r="24" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+                              </svg>
+                                                    </div>
+                                                    <div class="files__file-block">
+                                                        <div class="files__file-image"></div>
+                                                        <div class="files__file-text">{{name}}</div>
+                                                    </div>
+                                                    <div class="files__file-error">{{error}}</div>
+                                                </div>
+                                            </script>
+                                            <div class="files__file-add">
+                                                <div class="files__file files__file_add files__file-add-item files__file-add-item_file" title="Добавить <br>файл">
+                                                    <div class="files__file-block">
+                                                        <div class="files__file-image"></div>
+                                                        <div class="files__file-text">Добавить <br>файл</div>
+                                                    </div>
+                                                </div>
+                                                <div class="files__drag-n-drop files__file-add-item files__file-add-item_dnd">
+                                                    <div class="files__drag-n-drop-image"></div>
+                                                    <div class="files__drag-n-drop-block">
+                                                        <div class="files__drag-n-drop-title files__drag-n-drop-title_desk">Перетяните в эту область файлы</div>
+                                                        <div class="files__drag-n-drop-title files__drag-n-drop-title_mob">Загрузить файлы</div>
+                                                        <div class="files__drag-n-drop-text">Png, Pdf, Pptx, Docx, key
+
+                                                            <span>Общий размер файлов не более 50 МБ.  Макс. 5 файлов.</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="files__file-add-input">
+                                                    <input type="file" multiple accept="image/jpeg,image/png,application/pdf,application/octet-stream,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint">
+                                                </div>
+                                            </div>
+                                            <div class="files__file-add-error">Неудалось загрузить. Превышен лимит размера файлов</div>
+                                        </div>
+                                        <button class="button feedback-modal__button button_modal button_form" type="submit" style="animation-delay: .6s;">
+                        <div class="button__text">Отправить</div>
+                      </button>
+                                        <div class="feedback-modal__sign" style="animation-delay: .65s;">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с <a href='#' target='_blank'>правилами участия</a> и <a href='#' target='_blank'>политикой конфиденциальности</a>.</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro__pagination intro__element">
+                <div class="intro__pagination-titles">
+                    <div class="intro__pagination-title">Главная</div>
+                    <div class="intro__pagination-title">Возможности</div>
+                    <div class="intro__pagination-title">Для кого</div>
+                    <div class="intro__pagination-title">Заявка</div>
+                </div>
+                <div class="intro__pagination-item" data-id="intro-1"></div>
+                <div class="intro__pagination-item" data-id="intro-2"></div>
+                <div class="intro__pagination-item" data-id="intro-3"></div>
+                <div class="intro__pagination-item" data-id="intro-4"></div>
+            </div>
+            <div class="intro__scroll-wrapper intro__element">
+                <div class="intro__scroll-icon"><svg width="36" height="50" viewBox="0 0 36 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="34" height="48" rx="17" stroke="white" stroke-width="2"/>
+<rect x="16" y="18" width="4" height="8" rx="2" fill="white"/>
+</svg>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script class="template-engine" type="text/template" id="manifest-modal">
+        <div class="modal custom-modal custom-modal_manifest-modal" data-tingle-class="tingle-modal_fullscreen">
+            <div class="custom-modal__close-btn" data-modal-close="">
+                <div class="custom-modal__close-btn-icon" data-modal-close=""></div>
+            </div>
+            <div class="custom-modal__content">
+                <div class="custom-scroll manifest-modal">
+                    <div class="custom-scroll__content">
+                        <div class="manifest-modal__content">
+                            <div class="manifest-modal__title"><span></span>-манифест</div>
+                            <div class="manifest-modal__list">
+                                <div class="manifest-modal__item">
+                                    <div class="manifest-modal__item-index">1</div>
+                                    <div class="manifest-modal__item-text">Синтетическая история искусств, согласно традиционным представлениям, вызывает композиционный миракль. Стиль просветляет синтаксис искусства, так Г.Корф формулирует собственную антитезу. Цвет, в первом приближении,
+                                        монотонно продолжает конструктивный меланхолик.</div>
+                                </div>
+                                <div class="manifest-modal__item">
+                                    <div class="manifest-modal__item-index">2</div>
+                                    <div class="manifest-modal__item-text">Принцип артистизма, в том числе, представляет собой первоначальный диахронический подход, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике.</div>
+                                </div>
+                                <div class="manifest-modal__item">
+                                    <div class="manifest-modal__item-index">3</div>
+                                    <div class="manifest-modal__item-text">Дискредитация теории катарсиса, как бы это ни казалось парадоксальным, представляет собой глубокий хорал. </div>
+                                </div>
+                                <div class="manifest-modal__item">
+                                    <div class="manifest-modal__item-index">4</div>
+                                    <div class="manifest-modal__item-text">Бессознательное, как бы это ни казалось парадоксальным, вызывает непосредственный анимус, подобный исследовательский подход к проблемам художественной типологии можно обнаружить у К.Фосслера.</div>
+                                </div>
+                                <div class="manifest-modal__item">
+                                    <div class="manifest-modal__item-index">5</div>
+                                    <div class="manifest-modal__item-text">Интенция заканчивает деструктивный сангвиник, так Г.Корф формулирует собственную антитезу. Художественное восприятие ненаблюдаемо. Художественное переживание, в первом приближении, случайно.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script class="template-engine" type="text/template" id="feedback-modal">
+        <div class="modal custom-modal custom-modal_feedback-modal" data-tingle-class="tingle-modal_fullscreen">
+            <div class="custom-modal__close-btn" data-modal-close="">
+                <div class="custom-modal__close-btn-icon" data-modal-close=""></div>
+            </div>
+            <div class="custom-modal__content">
+                <div class="custom-scroll feedback-modal">
+                    <div class="custom-scroll__content">
+                        <div class="feedback-modal__content">
+                            <div class="feedback-modal__title text-reveal"><span>Форма заявки</span></div>
+                            <form class="form feedback-modal__form" action="/request" method="POST">
+                                <div class="input input_small feedback-modal__item input_title-as-placeholder" style="animation-delay: .3s;">
+                                    <label class="input__label">
+                      <div class="form-label input__title">Имя *
+                      </div>
+                      <input class="input__input" name="name" autocomplete="off" data-validations="required"></input>
+                    </label>
+                                    <div class="form-error">Неверно указан адрес сайта
+                                    </div>
+                                </div>
+                                <div class="input input_small feedback-modal__item input_title-as-placeholder" style="animation-delay: .35s;">
+                                    <label class="input__label">
+                      <div class="form-label input__title">Email или телефон *
+                      </div>
+                      <input class="input__input" name="email" autocomplete="off" data-validations="required,email-or-phone" data-inputmask></input>
+                    </label>
+                                    <div class="form-error">Неверно указан адрес сайта
+                                    </div>
+                                </div>
+                                <div class="input input_small feedback-modal__item input_title-as-placeholder" style="animation-delay: .4s;">
+                                    <label class="input__label">
+                      <div class="form-label input__title">Название продукта *
+                      </div>
+                      <input class="input__input" name="product_name" autocomplete="off" maxlength="50" data-validations="required"></input>
+                    </label>
+                                    <div class="form-error">Неверно указан адрес сайта
+                                    </div>
+                                    <div class="input__count">
+                                        <div class="input__count-from">0</div>
+                                        <div class="input__count-sep">&nbsp;/&nbsp;</div>
+                                        <div class="input__count-total">50</div>
+                                    </div>
+                                </div>
+                                <div class="input input_small input_textarea feedback-modal__item feedback-modal__textarea input_title-as-placeholder" style="animation-delay: .45s;">
+                                    <label class="input__label">
+                      <div class="form-label input__title">Краткое описание продукта *
+                      </div>
+                      <div class="input__resize-container">
+                        <div class="custom-scroll custom-scroll_textarea">
+                          <div class="custom-scroll__content">
+                            <textarea class="input__input" name="description" autocomplete="off" rows="3" maxlength="500" data-validations="required"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                                    <div class="form-error">Неверно указан адрес сайта
+                                    </div>
+                                </div>
+                                <div class="input input_small input_product-name feedback-modal__item input_title-as-placeholder" style="animation-delay: .5s;">
+                                    <label class="input__label">
+                      <div class="form-label input__title">Ссылка (если есть)
+                      </div>
+                      <input class="input__input" name="link" autocomplete="off"></input>
+                    </label>
+                                    <div class="form-error">Неверно указан адрес сайта
+                                    </div>
+                                </div>
+                                <div class="feedback-modal__conf feedback-modal__item">
+                                    <div class="files" style="animation-delay: .55s;">{{{{template-engine}}}}
+                                        <template class="template-engine files__file-tpl" type="text/template">
+                        <div class="files__file {{#if error}}files__file_error{{/if}} files__file_loading" title="{{name}}" data-id="{{id}}">
+                          <div class="files__file-cross"></div>
+                          <div class="files__file-load">
+                            <svg class="files__file-load-border-block" viewBox="-25 -25 50 50">
+                              <circle class="files__file-load-border-path" r="24" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+                            </svg>
+                          </div>
+                          <div class="files__file-block">
+                            <div class="files__file-image"></div>
+                            <div class="files__file-text">{{name}}</div>
+                          </div>
+                          <div class="files__file-error">{{error}}</div>
+                        </div>
+                      </template>{{{{/template-engine}}}}
+                                        <div class="files__file-add">
+                                            <div class="files__file files__file_add files__file-add-item files__file-add-item_file" title="Добавить <br>файл">
+                                                <div class="files__file-block">
+                                                    <div class="files__file-image"></div>
+                                                    <div class="files__file-text">Добавить <br>файл</div>
+                                                </div>
+                                            </div>
+                                            <div class="files__drag-n-drop files__file-add-item files__file-add-item_dnd">
+                                                <div class="files__drag-n-drop-image"></div>
+                                                <div class="files__drag-n-drop-block">
+                                                    <div class="files__drag-n-drop-title files__drag-n-drop-title_desk">Перетяните в эту область файлы</div>
+                                                    <div class="files__drag-n-drop-title files__drag-n-drop-title_mob">Загрузить файлы</div>
+                                                    <div class="files__drag-n-drop-text">Png, Pdf, Pptx, Docx, key
+
+                                                        <span>Общий размер файлов не более 50 МБ.  Макс. 5 файлов.</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="files__file-add-input">
+                                                <input type="file" multiple accept="image/jpeg,image/png,application/pdf,application/octet-stream,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint">
+                                            </div>
+                                        </div>
+                                        <div class="files__file-add-error">Неудалось загрузить. Превышен лимит размера файлов</div>
+                                    </div>
+                                    <button class="button feedback-modal__button button_modal button_form" type="submit" style="animation-delay: .6s;">
+                      <div class="button__text">Отправить</div>
+                    </button>
+                                    <div class="feedback-modal__sign" style="animation-delay: .65s;">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с <a href='#' target='_blank'>правилами участия</a> и <a href='#' target='_blank'>политикой конфиденциальности</a>.</div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script class="template-engine" type="text/template" id="feedback-fin-modal">
+        <div class="modal custom-modal custom-modal_feedback-fin-modal custom-modal_no-close" data-tingle-class="tingle-modal_fullscreen">
+            <div class="custom-modal__close-btn" data-modal-close="">
+                <div class="custom-modal__close-btn-icon" data-modal-close=""></div>
+            </div>
+            <div class="custom-modal__content">
+                <div class="feedback-fin-modal">
+                    <div class="feedback-fin-modal__icon"></div>
+                    <div class="feedback-fin-modal__title">Спасибо, Модест!</div>
+                    <div class="feedback-fin-modal__text">Мы посмотрим заявку <br>и напишем примерно через неделю. <br> Если нам понравится, будем долго <br>и с интересом расспрашивать о твоём <br>продукте — будь готов.</div>
+                    <button class="button button_fin feedback-fin-modal__button">
+              <div class="button__text">ОК, понял</div>
+            </button>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script class="template-engine" type="text/template" id="ca-modal">
+        <div class="modal custom-modal custom-modal_ca-modal" data-tingle-class="tingle-modal_fullscreen">
+            <div class="custom-modal__close-btn" data-modal-close="">
+                <div class="custom-modal__close-btn-icon" data-modal-close=""></div>
+            </div>
+            <div class="custom-modal__content">
+                <div class="custom-scroll ca-modal">
+                    <div class="custom-scroll__content">
+                        <div class="ca-modal__content">
+                            <div class="ca-modal__title">Молодая <br>и&nbsp;прогрессивная целевая аудитория <br>и&nbsp;огромный поток на&nbsp;точках</div>
+                            <div class="ca-modal__text">Типическое, так или иначе, готично продолжает определенный предмет искусства. &laquo;кодекс деяний&raquo; традиционен. Шиллер утверждал: комедия характерна. Синтетическая история искусств, согласно традиционным представлениям,
+                                вызывает композиционный миракль. <br><br>Стиль просветляет синтаксис искусства, так Г.Корф формулирует собственную антитезу. Цвет, в&nbsp;первом приближении, монотонно продолжает конструктивный меланхолик. Онтогенез просветляет
+                                диахронический подход. <br><br>Иррациональное в&nbsp;творчестве, как&nbsp;бы это ни&nbsp;казалось парадоксальным, образует бессознательный хтонический миф. Возвышенное, согласно традиционным представлениям, представляет
+                                собой бессознательный культовый образ. <br><br></div>
+                            <a class="button button_info ca-modal__button button_modal" href="#" target="_blank">
+                                <div class="button__icon"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+<circle class="button__icon-bg" cx="20" cy="20" r="19" fill="#3252E8" stroke="#ECEEF8" stroke-width="2"/>
+<path class="button__icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M20.0704 23L15 18.1596H18.9437V10H21.0563V18.1596H25L20.0704 23Z" fill="white"/>
+<path class="button__icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M26 29H14V27H26V29Z" fill="white"/>
+</svg>
+
+                                </div>
+                                <div class="button__text">информация&nbsp;о&nbsp;программе</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script class="template-engine" type="text/template" id="about-modal">
+        <div class="modal custom-modal custom-modal_ca-modal" data-tingle-class="tingle-modal_fullscreen">
+            <div class="custom-modal__close-btn" data-modal-close="">
+                <div class="custom-modal__close-btn-icon" data-modal-close=""></div>
+            </div>
+            <div class="custom-modal__content">
+                <div class="custom-scroll ca-modal">
+                    <div class="custom-scroll__content">
+                        <div class="ca-modal__content">
+                            <div class="ca-modal__title">О Проекте</div>
+                            <div class="ca-modal__text">Мы&nbsp;в&nbsp;Yota снова решили выйти за&nbsp;границы привычного. Вместо того, чтобы продавать у&nbsp;себя в&nbsp;салонах обычные гаджеты, мы&nbsp;хотим дать шанс прогрессивным и&nbsp;технологичным ребятам&nbsp;&mdash; тем,
+                                кто хочет сделать мир проще, удобнее и&nbsp;интереснее с&nbsp;помощью инновационных идей. <br><br>Мы&nbsp;решили дать им&nbsp;место на&nbsp;полках Yota. <br><br>Объявляем open-call&nbsp;&mdash; ищем изобретателей и&nbsp;тех,
+                                кто находит и&nbsp;продаёт интересные продукты. Мы&nbsp;не&nbsp;ограничиваем себя рамками, это может быть что угодно&nbsp;&mdash; робот-помощник, солнечный гриль или бутылка из&nbsp;биоразлагаемого пластика&nbsp;&mdash;
+                                главное, чтобы было необычно и&nbsp;свежо. <br><br>Если ты&nbsp;делаешь или привозишь прогрессивные товары и&nbsp;хочешь вывести их&nbsp;на&nbsp;большой рынок, можешь продавать их&nbsp;в&nbsp;нашей рознице&nbsp;&mdash;
+                                просто подай заявку.</div>
+                            <a class="button button_info ca-modal__button button_modal" href="#" target="_blank">
+                                <div class="button__icon"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+<circle class="button__icon-bg" cx="20" cy="20" r="19" fill="#3252E8" stroke="#ECEEF8" stroke-width="2"/>
+<path class="button__icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M20.0704 23L15 18.1596H18.9437V10H21.0563V18.1596H25L20.0704 23Z" fill="white"/>
+<path class="button__icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M26 29H14V27H26V29Z" fill="white"/>
+</svg>
+
+                                </div>
+                                <div class="button__text">информация&nbsp;о&nbsp;программе</div>
+                            </a>
+                            <button class="button ca-modal__button-bottom button_modal" data-modal-close data-nav="intro-4">
+                  <div class="button__text">оставить заявку</div>
+                </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script class="template-engine" type="text/template" id="rd-modal">
+        <div class="modal custom-modal custom-modal_request-done-modal" data-tingle-class="tingle-modal_fullscreen">
+            <div class="custom-modal__close-btn" data-modal-close="">
+                <div class="custom-modal__close-btn-icon" data-modal-close=""></div>
+            </div>
+            <div class="custom-modal__content">
+                <div class="request-done-modal">
+                    <div class="request-done-modal__content">
+                        <div class="request-done-modal__title">Спасибо, {{name}}!</div>
+                        <div class="request-done-modal__text">Твоя заявка скоро попадет на&nbsp;стол к&nbsp;высококомпетентному жюри. Будь готов расказать немного больше о&nbsp;своем продукте. Срок рассмотрения заявки примерно неделя, ну&nbsp;а&nbsp;там как получится, не&nbsp;серчай!</div>
+                        <button class="button button_modal" data-modal-close="">
+                <div class="button__text">ОК, понял</div>
+              </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script class="template-engine" type="text/template" id="cities-modal">
+        <div class="modal custom-modal custom-modal_cities-modal" data-tingle-class="tingle-modal_fullscreen">
+            <div class="custom-modal__close-btn" data-modal-close="">
+                <div class="custom-modal__close-btn-icon" data-modal-close=""></div>
+            </div>
+            <div class="custom-modal__content">
+                <div class="custom-scroll cities-modal">
+                    <div class="custom-scroll__content">
+                        <div class="cities-modal__content">
+                            <div class="cities-modal__title">Огромная география <br>распространения наших точек продаж</div>
+                            <div class="cities-modal__form">
+                                <div class="input input_small input_title-as-placeholder">
+                                    <label class="input__label">
+                      <div class="form-label input__title">Поиск по городу
+                      </div>
+                      <input class="input__input" name="city" autocomplete="off"></input>
+                    </label>
+                                    <div class="form-error">Неверно указан адрес сайта
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cities-modal__result">{{{{template-engine}}}}
+                                <template class="template-engine cities-modal__tpl" type="text/template">{{#each this}}
+                    <div class="cities-modal__result-item" data-id="{{title}}">
+                      <div class="cities-modal__result-item-title">{{title}}</div>
+                      <div class="cities-modal__result-item-list">{{#each items}}
+                        <div class="cities-modal__result-option" data-modal-close data-modal="#map-modal" data-modal-params="{{fullName}}" data-id="{{id}}">{{fullName}}</div>{{/each}}
+                      </div>
+                    </div>{{/each}}
+                  </template>{{{{/template-engine}}}}
+                            </div>
+                            <a class="button button_info button_modal cities-modal__button" href="#" target="_blank">
+                                <div class="button__icon"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+<circle class="button__icon-bg" cx="20" cy="20" r="19" fill="#3252E8" stroke="#ECEEF8" stroke-width="2"/>
+<path class="button__icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M20.0704 23L15 18.1596H18.9437V10H21.0563V18.1596H25L20.0704 23Z" fill="white"/>
+<path class="button__icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M26 29H14V27H26V29Z" fill="white"/>
+</svg>
+
+                                </div>
+                                <div class="button__text">информация&nbsp;о&nbsp;программе</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script class="template-engine" type="text/template" id="gallery-modal">
+        <div class="modal custom-modal custom-modal_gallery-modal" data-tingle-class="tingle-modal_fullscreen">
+            <div class="custom-modal__close-btn" data-modal-close="">
+                <div class="custom-modal__close-btn-icon" data-modal-close=""></div>
+            </div>
+            <div class="custom-modal__content">
+                <div class="gallery-modal">
+                    <div class="gallery-modal__header">
+                        <a class="button button_info gallery-modal__button" href="#" target="_blank">
+                            <div class="button__icon"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+<circle class="button__icon-bg" cx="20" cy="20" r="19" fill="#3252E8" stroke="#ECEEF8" stroke-width="2"/>
+<path class="button__icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M20.0704 23L15 18.1596H18.9437V10H21.0563V18.1596H25L20.0704 23Z" fill="white"/>
+<path class="button__icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M26 29H14V27H26V29Z" fill="white"/>
+</svg>
+
+                            </div>
+                            <div class="button__text">информация о программе</div>
+                        </a>
+                    </div>
+                    <div class="gallery-modal__title">{{#eq this 'store'}}Магазин YotaStore{{else}}Современная и красивая витрина{{/eq}}</div>{{#eq this 'store'}}
+                    <div class="gallery-modal__subtitle"><a class="gallery-modal__subtitle-link" href="//www.yota.ru/store">www.yota.ru/store</a></div>{{/eq}}{{{{template-engine}}}}
+                    <template class="template-engine gallery-modal__tpl" type="text/template">
+              <div class="gallery-carousel gallery-modal__carousel">
+                <div class="gallery-carousel__container swiper-container">
+                  <div class="gallery-carousel__wrapper swiper-wrapper">{{#each gallery}}
+                    <div class="gallery-carousel__item swiper-slide">
+                      <div class="gallery-carousel__slide-inner">
+                        <div class="gallery-carousel__slide-content" data-modal="#image-modal" data-modal-params='{"src":"{{file}}"}'><img class="gallery-carousel__image" src="{{file}}"></div>
+                      </div>
+                    </div>{{/each}}
+                  </div>
+                  <div class="gallery-carousel__nav">
+                    <div class="gallery-carousel__nav-item gallery-carousel__nav-item_prev swiper-button-prev">
+                      <div class="gallery-carousel__nav-arrow"></div>
+                    </div>
+                    <div class="gallery-carousel__nav-item gallery-carousel__nav-item_next swiper-button-next">
+                      <div class="gallery-carousel__nav-arrow"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>{{{{/template-engine}}}}
+                </div>
+            </div>
+        </div>
+    </script>
+    <script class="template-engine" type="text/template" id="map-modal">
+        <div class="modal custom-modal custom-modal_map-modal" data-tingle-class="tingle-modal_fullscreen">
+            <div class="custom-modal__close-btn" data-modal-close="">
+                <div class="custom-modal__close-btn-icon" data-modal-close=""></div>
+            </div>
+            <div class="custom-modal__content">
+                <div class="map-modal">
+                    <div class="map-modal__map">
+                        <div class="map">
+                            <div class="map__layer map__wrapper"></div>
+                            <div class="map__layer map__fade"></div>
+                            <div class="map__layer map__blue"></div>
+                        </div>
+                    </div>
+                    <div class="map-modal__content">
+                        <div class="map-modal__header">
+                            <a class="button button_info map-modal__button" href="#" target="_blank">
+                                <div class="button__icon"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+<circle class="button__icon-bg" cx="20" cy="20" r="19" fill="#3252E8" stroke="#ECEEF8" stroke-width="2"/>
+<path class="button__icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M20.0704 23L15 18.1596H18.9437V10H21.0563V18.1596H25L20.0704 23Z" fill="white"/>
+<path class="button__icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M26 29H14V27H26V29Z" fill="white"/>
+</svg>
+
+                                </div>
+                                <div class="button__text">информация&nbsp;о&nbsp;программе</div>
+                            </a>
+                        </div>
+                        <div class="map-modal__title">2 500 <br>точек продаж <br>по всей России
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script class="template-engine" type="text/template" id="image-modal">
+        <div class="modal custom-modal custom-modal_image-modal custom-modal_close-circle" data-tingle-class="tingle-modal_fullscreen">
+            <div class="custom-modal__close-btn" data-modal-close="">
+                <div class="custom-modal__close-btn-icon" data-modal-close=""></div>
+            </div>
+            <div class="custom-modal__content">
+                <div class="custom-scroll image-modal">
+                    <div class="custom-scroll__content">
+                        <div class="image-modal__item"><img class="image-modal__item-image" src="{{src}}"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script>
+        var VERSION = "0.0.5";
+
+        function base_url(url) {
+            return ("" + url).replace(/\/{2,}/g, "/");
+        }
+    </script>
+    <script>
+        (function(w, d) {
+            function preload() {
+                try {
+                    return d.createElement("link").relList.supports("preload");
+                } catch (e) {}
+                return false;
+            }
+
+            function promise() {
+                return w.Promise;
+            }
+
+            function t(fn, url, attr) {
+                if (!fn()) d.write('<script src="' + url + '" ' + attr + '></' + 'script>');
+            }
+            t(preload, "scripts/libs/cssrelpreload.js", "async");
+            t(promise, "scripts/libs/es6-promise.min.js", "defer");
+
+        }(window, document));
+    </script>
+    <script src="scripts/190921_yota_blue.js?v=0.0.5" defer></script>
+</body>
+
+</html>

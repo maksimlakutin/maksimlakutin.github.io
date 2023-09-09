@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'YotaDigit';
+    src: local('YotaDigit Bold'), local('YotaDigit-Bold'), url('hinted-YotaDigit-Bold.woff2') format('woff2'), url('hinted-YotaDigit-Bold.woff') format('woff'), url('hinted-YotaDigit-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YotaDigit';
+    src: local('YotaDigit'), local('YotaDigit-Regular'), url('hinted-YotaDigit-Regular.woff2') format('woff2'), url('hinted-YotaDigit-Regular.woff') format('woff'), url('hinted-YotaDigit-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YotaDigit';
+    src: local('YotaDigit Extra Bold'), local('YotaDigit-ExtraBold'), url('hinted-YotaDigit-ExtraBold.woff2') format('woff2'), url('hinted-YotaDigit-ExtraBold.woff') format('woff'), url('hinted-YotaDigit-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+}
